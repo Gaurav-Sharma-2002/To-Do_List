@@ -1,0 +1,94 @@
+/* input & label  */
+input[type="checkbox"]:checked + label.strikethrough {
+  text-decoration: line-through;
+  color: red;
+}
+
+label {
+  color: darkgreen;
+    font-weight: 700;
+    background-color: azure;
+    font-size: 1.5rem;
+    padding: 0 5px;
+    border-radius: 15px;
+    margin: 5px 0;
+}
+
+.taskEnterInput {
+  text-align: center;
+  border: none;
+  border-bottom: 4px dotted;
+  width: 20%;
+  margin: 20px 0px;
+}
+
+.tasksAddButton {
+  margin-left: 20px;
+}
+
+form > input {
+  background-color: transparent;
+  outline: none;
+}
+
+/* common elements  */
+a {
+  text-decoration: none;
+}
+
+li {
+  margin-right: 10px;
+}
+
+body {
+  text-align: center;
+}
+
+/* custom styling  */
+.bg-image {
+  background-image: url(../images/bg.webp);
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: 100% 100%;
+}
+
+.tasksNavbar {
+  display: flex;
+  justify-content: center;
+}
+
+.navLink {
+  margin-right: 40px;
+  font-size: 30px;
+  color: white !important;
+}
+
+a:hover {
+  color: greenyellow !important;
+}
+
+.taskListHeading {
+  margin: 20px 0;
+}
+
+h1 > em {
+  font-weight: 800;
+  background-color: beige;
+  padding: 10px;
+  border-radius: 30%;
+}
+
+.tasksLi {
+  list-style: none;
+  text-align: left;
+}
+
+.tasksRow {
+  display: flex;
+  margin-left: 40%;
+}
+
+footer {
+  padding: 10px;
+  font-weight: 600;
+}

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="styles/styles.css">
+    <title>Work Tasks</title>
+</head>
+
+<body class="bg-body-tertiary bg-image">
+
+    <nav class="tasksNavbar bg-secondary">
+        <a href="/" class="navLink text-body-secondary">Home</a>
+        <a href="/dayTasks" class="navLink text-body-secondary">Day Tasks</a>
+    </nav>
+
+    <div class="container">
+        <h1 class="taskListHeading text-body-secondary"><em>Work-To-Do List</em> </h1>
+        <form action="/wadd" method="POST">
+            <input class="taskEnterInput" type="text" name="task" placeholder="Add a new task..." required>
+            <button class="btn btn-secondary tasksAddButton" type="submit">Add +</button>
+        </form>
+        <ul>
+            <% worktasks.forEach((task, index)=> { %>
+                <div class="tasksRow">
+                    <li class="tasksLi">
+                        <input type="checkbox" name="completed" value="<%= index %>">
+                        <label for="task<%= index %>" class="strikethrough">
+                            <%= task.text %>
+                        </label>
+                    </li>
+                </div>
+                <% }); %>
+        </ul>
+    </div>
+
+    <footer>
+        © 2023 Gaurav Sharma . All rights reserved.
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>
